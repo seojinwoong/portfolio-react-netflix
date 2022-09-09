@@ -1,0 +1,15 @@
+.nav { position: fixed; width: 100%; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; box-sizing: border-box; transition: all .3s; z-index: 1000; } 
+
+.nav.scroll-active { background: rgba(0, 0, 0, 0.7); } 
+
+.nav .nav_logo { width: 100px; cursor: pointer; } 
+
+.nav .nav_user_profile { width: 35px; cursor: pointer; } 
+
+.nav .search-movie-wrapper { border: 1px solid #fff; width: 400px; height: 32px; background: #0b0b0b; color: #fff; display: flex; align-items: center; position: relative; } 
+
+.nav .search-movie-wrapper>.fa-search { width: 30px; text-align: center; font-size: 20px; } 
+
+.nav .search-movie-wrapper>.fa-times { width: 30px; text-align: center; font-size: 20px; position: absolute; right: 0; cursor: pointer; } 
+
+.nav .search-movie-wrapper>input[type='text'] { position: absolute; left: 30px; background: none; color: #fff; top: 0; height: 100%; width: calc(100% - 60px); padding: 0 5px; font-size: 18px; } 
