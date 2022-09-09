@@ -30,7 +30,7 @@ const Nav = () => {
 
   const handleSearchMovie = (e) => {
     setSearchMovie(e.target.value);
-    if (e.target.value == "") navigate('');
+    if (e.target.value === "") navigate('');
     else navigate(`/search?q=${e.target.value}`);
   }
 

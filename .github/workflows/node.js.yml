@@ -27,8 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm i
-    - run: npm run build --if-present
-    - run: npm test
+    - run: npm run build
 
     - uses: awact/s3-action@master
       with:
