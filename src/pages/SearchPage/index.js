@@ -23,7 +23,6 @@ const SearchPage = () => {
   }, [debouncedSearchTerm]);
 
   useEffect(() => {
-    console.log('searchMovies출력', searchMovies);
   }, [searchMovies]);
 
   const fetchMovies = async (movietitle) => {
@@ -32,11 +31,11 @@ const SearchPage = () => {
         `/search/multi?include_adult=false&query=${movietitle}`
       );
       const onlyMovies = request.data.results.filter(result => {
-        return result.media_type === 'movie';
+        return result.media_type === 'movie' || result.media_type === 'tv'
       });
       setSearchMovies(onlyMovies);
     } catch (error) {
-      console.log('error발생', error);
+      console.log('에러발생', error);
     }
   } 
 
