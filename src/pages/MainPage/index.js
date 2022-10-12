@@ -12,10 +12,12 @@ const MainPge = () => {
   const [detect, setDetect] = useState(Array.from({length: 5}, () => false));
 
   useEffect(() => {
+    let copy = [...detect];
     let observer = new window.IntersectionObserver(function (entries, self) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          fetchMovie(entry.target);
+          copy[entry.target.dataset.row] = true;
+          setDetect([...copy]);
           self.unobserve(entry.target);
         }
       });
@@ -31,16 +33,6 @@ const MainPge = () => {
       });
     }
   }, []);
-  
-  const fetchMovie = (entry) => {
-    const idx = entry.dataset.row;
-    let copy = [...detect];
-    let newCopy = copy.map((el, index) => {
-      if (idx >= index) return true;
-      else return false;
-    });
-    setDetect(newCopy);
-  };
   
   return (
     <>
