@@ -1,5 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Footer = () => {
 
@@ -9,10 +10,10 @@ const Footer = () => {
             <FooterLinkContainer>
                 <FooterLinkTitle>넷플릭스 대한민국</FooterLinkTitle>
                 <FooterLinkContent>
-                    <FooterLink href="https://help.netflix.com/ko/node/412">넷플릭스 소개</FooterLink>
-                    <FooterLink href="https://help.netflix.com/ko/">고객 센터</FooterLink>
-                    <FooterLink href="https://help.netflix.com/ko/">미디어 센터</FooterLink>
-                    <FooterLink href="https://help.netflix.com/ko/">이용 약관</FooterLink>
+                    <Link to="/">넷플릭스 소개</Link>
+                    <Link to="/">고객 센터</Link>
+                    <Link to="/">미디어 센터</Link>
+                    <Link to="/">이용 약관</Link>
                 </FooterLinkContent>
                 <FooterDescContainer>
                     <FooterDescRights>Netflix Rights Reserved.</FooterDescRights>
@@ -62,20 +63,20 @@ const FooterLinkContent = styled.div`
     @media (max-width: 768px) {
         margin-top: 26px;
     }   
-`;
 
-const FooterLink = styled.a`
-    color: gray;
-    font-size: 14px;
-    width: 110px;
-    margin-bottom: 21px;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+    a {
+        color: gray;
+        font-size: 14px;
+        width: 110px;
+        margin-bottom: 21px;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
 
-    @media (max-width: 768px) {
-        margin-bottom: 16px;
+        @media (max-width: 768px) {
+           margin-bottom: 16px;
+        }
     }
 `;
 
