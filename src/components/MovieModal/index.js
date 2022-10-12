@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
-import "./MovieModal.css";
+import "./MovieModal.scss";
 
 const MovieModal = ({
   backdrop_path,
@@ -13,10 +12,6 @@ const MovieModal = ({
   setIsModalOpen,
 }) => {
   const ref = useRef();
-
-  useOnClickOutside(ref, () => {
-    setIsModalOpen(false);
-  })
 
   return (
     <div className="presentation">
@@ -40,6 +35,7 @@ const MovieModal = ({
             <p className="modal__overview">{overview}</p>
           </div>
         </div>
+        <div className="modal-shadow" onClick={()=>setIsModalOpen(false)}></div>
       </div>
     </div>
   );

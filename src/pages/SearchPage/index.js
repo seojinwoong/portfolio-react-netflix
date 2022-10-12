@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import axios from '../../api/axios';
 import MovieModal from '../../components/MovieModal';
 import { useDebounce } from '../../hooks/useDebounce';
-import './SearchPage.css';
+import './SearchPage.scss';
 
 const SearchPage = () => {
   const [searchMovies, setSearchMovies] = useState([]);

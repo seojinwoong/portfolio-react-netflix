@@ -1,0 +1,17 @@
+.search-result-movies-wrap { padding: 100px 20px 0; display: flex; width: 100%; flex-wrap: wrap; margin: 0 -10px;} 
+.search-movie-poster { flex-basis: 25%; flex-shrink: 0;  margin-bottom: 20px; padding:0 10px;} 
+.search-movie-poster>img { max-height: fit-content; } 
+.search-movie-poster .movie-title { color: #fff; font-size: 18px; margin-top: 5px; } 
+.no-results { display: flex; justify-content: center; align-content: center; color: #c5c5c5; height: 100%; padding: 8rem 30px; } 
+.no-results h2 { margin-bottom: 20px; font-size: 20px; } 
+.no-results li { font-size: 16px; list-style-type: disc; } 
+
+@media (max-width: 1000px) {
+    .search-movie-poster {flex-basis: 33.3333%;}
+}
+@media (max-width: 700px) {
+    .search-movie-poster {flex-basis: 50%;}
+}
+@media (max-width: 360px) {
+    .search-movie-poster {flex-basis: 100%;}
+}

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import '../assets/css/Nav.css';
+import '../assets/css/Nav.scss';
 
 const Nav = () => {
   const useQuery = () => new URLSearchParams(useLocation().search);
@@ -40,7 +40,7 @@ const Nav = () => {
   }
   
   return (
-    <nav className={`nav ${isNavActive && 'scroll-active'}`}>
+    <nav className={`nav${isNavActive ? ' scroll-active' : ''}`}>
         <img 
         className='nav_logo'
         onClick={resetSearchMovie}

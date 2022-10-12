@@ -1,0 +1,96 @@
+.banner-wrapper {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-wrapper:after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-wrapper .banner-content {
+    color: #fff;
+    position: absolute;
+    padding-left: 50px;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-wrapper .movie-tit {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-bottom: 50px;
+}
+
+.banner-wrapper .banner-btn-wrap .btns {
+    cursor: pointer;
+    background: none;
+    color: #fff;
+    margin-right: 10px;
+    padding: 10px 26px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    transition: opacity .4s;
+}
+
+.banner-wrapper .banner-btn-wrap .btns:hover {
+    opacity: 0.7;
+}
+
+.banner-wrapper .banner-btn-wrap .btns.btn-play {
+    background: #c90b15;
+    border: 1px solid #c90b15;
+}
+
+.banner-wrapper .banner-btn-wrap .btns.btn-warning {
+    cursor: not-allowed;
+    background: gray;
+}
+
+.banner-wrapper .banner-btn-wrap .btns.btn-more-info {
+    background: #0c0c0c;
+    border: 1px solid #404040;
+}
+
+.banner-wrapper .banner-btn-wrap .btns>span {
+    padding-left: 8px;
+}
+
+.banner-wrapper .movie-desc {
+    margin-top: 20px;
+    font-size: 20px;
+    max-width: 700px;
+    word-break: keep-all;
+}
+
+.banner-wrapper .banner-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111)
+}
+
+@media (max-width: 800px) {
+    .banner-wrapper .movie-tit {font-size: 50px; margin-bottom: 20px; }
+    .banner-wrapper .banner-btn-wrap .btns {padding: 9px 16px; font-size: 15px; margin-right: 8px;}
+    .banner-wrapper .movie-desc {font-size: 16px; padding-right: 20px;} 
+}
+@media (max-width: 600px) {
+    .banner-wrapper .movie-tit {font-size: 38px; margin-bottom: 10px; }
+    .banner-wrapper .banner-btn-wrap .btns {font-size: 14px;}
+    .banner-wrapper .banner-content {padding-left: 20px;}
+}
