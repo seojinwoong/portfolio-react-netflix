@@ -4,6 +4,10 @@
 
 ![netflixmovie](https://user-images.githubusercontent.com/42455534/196230938-b4fd85c8-c6ad-4302-a816-01d525096a61.gif)
 
+## 사용한 기술스택
+![REACT](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+![SCSS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
 ## 구조 요약
   #### 🔳 Component
@@ -31,6 +35,9 @@
   영화 정보를 불러오는 API요청을 한 후에 응답을 받고 그 data를 화면에 뿌려주기까지 일정시간이 걸리는데, 그 사이에 빈화면을 보여준다면
   사용자 입장에서 진행이 더디다는 느낌을 주게 됩니다. 그러한 점을 방지하고자 화면을 구성할 동안 로딩이 되는 스켈레톤 UI를 작업하였습니다.
   그리고 사용자가 페이지의 특정부분을 접근한 순간에 data를 받아오는 lazy loading 기능도 적용해 보았습니다.
+  
+  ![ezgif com-gif-maker](https://user-images.githubusercontent.com/42455534/196240732-47ed28e0-e287-4081-a706-d554053e5ea4.gif)
+
   
   
   
