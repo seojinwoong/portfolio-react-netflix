@@ -12,13 +12,14 @@ const MainPge = () => {
   const [detect, setDetect] = useState(Array.from({length: 5}, () => false));
 
   useEffect(() => {
-    let copy = [...detect];
     let observer = new window.IntersectionObserver(function (entries, self) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          copy[entry.target.dataset.row] = true;
-          setDetect([...copy]);
-          self.unobserve(entry.target);
+          setDetect(prev => {
+            let copy = [...prev];
+            copy[entry.target.dataset.row] = true;
+            return copy
+          });
         }
       });
     }, config);

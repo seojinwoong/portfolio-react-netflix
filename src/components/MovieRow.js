@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, memo, useState, useEffect } from 'react';
 import axios from '../api/axios';
 import '../assets/css/MovieRow.scss';
 import MovieModal from './MovieModal';
@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const MovieRow = ({id, title, fetchURL, isLargePoster, detect}) => {
+  console.log('movierow 렌더링');
   const [movies, setMovies] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [movieInfo, setMovieInfo] = useState({});
@@ -26,7 +27,7 @@ const MovieRow = ({id, title, fetchURL, isLargePoster, detect}) => {
   const openMovieModal = (movie) => {
     setIsModalOpen(true);
     setMovieInfo(movie);
-  }
+  };
 
   return (
     <section className='movie-row'>
@@ -55,7 +56,7 @@ const MovieRow = ({id, title, fetchURL, isLargePoster, detect}) => {
             >
               <div id={id} className='row__posters'>
                   {movies.map(movie => (
-                    <SwiperSlide>
+                    <SwiperSlide key={movie.id}>
                       <img 
                           key={movie.id}
                           className={`row__poster ${isLargePoster ? 'row__posterLarge' : 'row__posterMedium'}`}
@@ -82,4 +83,4 @@ const MovieRow = ({id, title, fetchURL, isLargePoster, detect}) => {
   )
 }
 
-export default MovieRow;
+export default memo(MovieRow);
